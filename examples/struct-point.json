@@ -1,0 +1,34 @@
+{
+  "format_version": 1,
+  "types": [
+    {
+      "name": "Point",
+      "kind": "struct",
+      "size": 8,
+      "fields": [
+        {
+          "name": "x",
+          "type": "i32",
+          "offset": 0
+        },
+        {
+          "name": "y",
+          "type": "i32",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "handle",
+      "kind": "alias",
+      "alias_of": "u64",
+      "size": 8
+    },
+    {
+      "name": "vec4",
+      "kind": "array",
+      "element_type": "f32",
+      "size": 16
+    }
+  ]
+}

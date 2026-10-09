@@ -1,0 +1,12 @@
+build/
+out/
+.vs/
+.vscode/
+*.user
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.asmlex-state.json
+compile_commands.json

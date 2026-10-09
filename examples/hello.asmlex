@@ -1,0 +1,20 @@
+{
+  "format_version": 1,
+  "name": "hello",
+  "target": {
+    "architecture": "x86-64",
+    "bits": 64,
+    "format": "pe",
+    "base_address": "0x140000000"
+  },
+  "dialect": "nasm",
+  "sources": [
+    { "path": "hello.asm", "role": "assembly" }
+  ],
+  "types": [],
+  "settings": {
+    "assembler": "nasm",
+    "optimize": false,
+    "listing": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ASMLEX Dark",
+  "base": "dark",
+  "colors": {
+    "background": "#1E1E1E",
+    "foreground": "#D4D4D4",
+    "keyword": "#569CD6",
+    "register": "#4EC9B0",
+    "number": "#B5CEA8",
+    "string": "#CE9178",
+    "comment": "#6A9955",
+    "directive": "#C586C0",
+    "label": "#DCDCAA",
+    "error": "#F44747"
+  }
+}
