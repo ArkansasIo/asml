@@ -82,6 +82,7 @@ namespace asmlex::settings
     settings.auto_save_seconds = root.get("auto_save_seconds", settings.auto_save_seconds).asUInt();
     settings.recent_limit = root.get("recent_limit", settings.recent_limit).asUInt();
 
+    settings.recent_projects.clear();
     const Json::Value &recent = root["recent_projects"];
     if (recent.isArray())
     {
@@ -91,6 +92,10 @@ namespace asmlex::settings
           settings.recent_projects.push_back(entry.asString());
       }
     }
+    // `recent_limit` is applied after the list is read so that a file asking for
+    // a smaller history than it stores still trims down on load.
+    if (settings.recent_limit > 0 && settings.recent_projects.size() > settings.recent_limit)
+      settings.recent_projects.resize(settings.recent_limit);
     return settings;
   }
 
